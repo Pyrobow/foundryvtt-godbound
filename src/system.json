@@ -1,14 +1,13 @@
 {
   "name": "godbound",
-  "title": "godbound",
-  "description": "",
+  "title": "Godbound",
+  "description": "This is an unofficial Foundry System for Godbound. Godbound is a divine role-playing game written by Kevin Crawford",
   "version": "This is auto replaced",
-  "author": "<your name>",
+  "author": "Pyrobow",
   "authors": [
     {
-      "name": "<your name>",
-      "email": "<optionally your e-mail address>",
-      "discord": "<optionally your discord username>"
+      "name": "Pyrobow",
+      "discord": "Pyrobow"
     }
   ],
   "minimumCoreVersion": "9",
@@ -29,13 +28,13 @@
   "url": "This is auto replaced",
   "manifest": "This is auto replaced",
   "download": "This is auto replaced",
-  "license": "",
-  "readme": "",
+  "license": "LICENSE.txt",
+  "readme": "README.md",
   "bugs": "",
   "changelog": "",
   "initiative": "",
-  "gridDistance": 1,
-  "gridUnits": "",
+  "gridDistance": 5,
+  "gridUnits": "ft",
   "primaryTokenAttribute": "",
   "secondaryTokenAttribute": ""
 }
