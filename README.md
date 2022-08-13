@@ -1,10 +1,10 @@
-# godbound
+# Godbound
 
-Please add your description here.
+This is the un-offical support for the Godbound system for the Foundry VTT. It is in early days but will hopefully allow Players and GMs to easily play a Godbound campaign with minimal need for outside resources.
 
 ## Installation
 
-Please add your installation instructions here.
+For now their are no releases. 
 
 ## Development
 
