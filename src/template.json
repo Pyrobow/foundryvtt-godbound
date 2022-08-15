@@ -1,10 +1,265 @@
 {
   "Actor": {
-    "types": [],
-    "templates": {}
+    "types": ["character", "npc"],
+    "templates": {
+      "common": {
+        "saves": {
+          "hardiness": {
+            "base": 15,
+            "mod": 0,
+            "armourPenalty": false
+          },
+          "spirit": {
+            "base": 15,
+            "mod": 0,
+            "armourPenalty": false
+          },
+          "evasion": {
+            "base": 15,
+            "mod": 0,
+            "armourPenalty": false
+          }
+        },
+        "ac": {
+          "value": 9,
+          "mod": 0
+        },
+        "biography": {
+          "description": "",
+          "goal": "",
+          "notes": ""
+        },
+        "movement": {
+          "rate": 30,
+          "type": "walk"
+        },
+        "lowMagic": {
+          "preparedSpells": 0,
+          "instantSpells": 0
+        }
+      }
+    },
+    "character": {
+      "templates": ["common"],
+      "attributes": {
+        "str": {
+          "value": 0,
+          "bonus": 0,
+          "mod": 0,
+          "tweak": 0
+        },
+        "dex": {
+          "value": 0,
+          "bonus": 0,
+          "mod": 0,
+          "tweak": 0
+        },
+        "con": {
+          "value": 0,
+          "bonus": 0,
+          "mod": 0,
+          "tweak": 0
+        },
+        "wis": {
+          "value": 0,
+          "bonus": 0,
+          "mod": 0,
+          "tweak": 0
+        },
+        "int": {
+          "value": 0,
+          "bonus": 0,
+          "mod": 0,
+          "tweak": 0
+        },
+        "cha": {
+          "value": 0,
+          "bonus": 0,
+          "mod": 0,
+          "tweak": 0
+        }
+      },
+      "details": {
+        "level": 1,
+        "xp": {
+          "value": 0,
+          "next": 3
+        }
+      },
+      "hp": {
+        "value": 8,
+        "max": 8
+      },
+      "abilityPoints": {
+        "unspent": 0
+      },
+      "resources": {
+        "effort": {
+          "value": 2,
+          "max": 2
+        },
+        "influence": {
+          "value": 0,
+          "max": 0
+        },
+        "dominion": {
+          "unspent": 0,
+          "spent": 0,
+          "perMonth": 0
+        },
+        "wealth": {
+          "value": 0
+        }
+      }
+    },
+    "npc": {
+      "templates": ["common"],
+      "hd": {
+        "value": 1,
+        "max": 1
+      },
+      "morale": 10,
+      "effort": {
+        "value": 0,
+        "max": 0
+      },
+      "attacks": {
+        "amount": 1,
+        "range": "melee",
+        "area": "single-target",
+        "attackBonus": 0,
+        "damage": {
+          "dice": "1d6",
+          "straight": false
+        }
+      },
+      "actions": {
+        "amount": 1
+      }
+    }
   },
   "Item": {
-    "types": [],
-    "templates": {}
+    "types": [
+      "facts",
+      "armour",
+      "weapons",
+      "words",
+      "divineGifts",
+      "strifes",
+      "strifeTechniques",
+      "lowMagic",
+      "thaumaturgy",
+      "artifact",
+      "ability",
+      "item",
+      "project"
+    ],
+    "templates": {
+      "common": {
+        "description": "",
+        "notes": ""
+      }
+    },
+    "facts": {
+      "templates": ["common"],
+      "factModifier": 4
+    },
+    "armour": {
+      "templates": ["common"],
+      "baseAc": 9,
+      "isEquipped": false,
+      "type": "light",
+      "isShield": false,
+      "shieldModifier": -1,
+      "affectedSaves": {
+        "evasion": false,
+        "hardiness": false,
+        "spirit": false
+      }
+    },
+    "weapons": {
+      "templates": ["common"],
+      "type": "unarmed",
+      "damage": {
+        "roll": "1d2",
+        "isMagic": false,
+        "isStraight": false
+      },
+      "attribute": "",
+      "melee": true,
+      "range": 0,
+      "attackBonus": 0,
+      "quantity": 1
+    },
+    "words": {
+      "templates": ["common"]
+    },
+    "divineGifts": {
+      "templates": ["common"],
+      "sourceName": "",
+      "sourceType": "",
+      "effort": 0,
+      "time": "scene",
+      "activation": "action",
+      "smite": false
+    },
+    "strifes": {
+      "templates": ["common"],
+      "isLesser": false,
+      "lesserLevel": "",
+      "lesserDescription": ""
+    },
+    "strifeTechniques": {
+      "templates": ["common"],
+      "sourceName": "",
+      "sourceType": "",
+      "effort": 0,
+      "time": "scene",
+      "activation": "action",
+      "smite": false
+    },
+    "lowMagic": {
+      "templates": ["common"],
+      "lowMagicLevel": "initiate",
+      "castingType": "prepared"
+    },
+    "thaumaturgy": {
+      "templates": ["common"],
+      "invocation": "gate",
+      "timeToLearn": "1-week",
+      "arcaneConnectionRequired": false,
+      "sceneEffort": 0,
+      "dayEffort": 0,
+      "instantCastDamage": "1d6"
+    },
+    "artifact": {
+      "templates": ["common"],
+      "dominionCreationCost": 0,
+      "celestialShardCreationCost": 0,
+      "artifactEffort": {
+        "value": 1,
+        "max": 1
+      }
+    },
+    "ability": {
+      "templates": ["common"],
+      "effort": 0,
+      "time": "scene",
+      "activation": "action",
+      "smite": false
+    },
+    "item": {
+      "templates": ["common"],
+      "quantity": 1
+    },
+    "project": {
+      "templates": ["common"],
+      "difficulty": "",
+      "scope": "",
+      "resistance": 0,
+      "isCompleted": false,
+      "dominionSpent": 0,
+      "influenceCommited": 0
+    }
   }
 }
