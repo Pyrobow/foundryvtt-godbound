@@ -1,0 +1,50 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
+        <h1><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'Name' }}"/></h1>
+    </header>
+    
+    <div class="editor-section-container" style="min-height: 150px;">
+        <div class="sheet-editor-container">
+            <h2>{{localize "godbound.common.description"}}</h2>
+            {{editor content=data.data.description target="data.description" button=true owner=owner editable=editable}}
+        </div>
+        <div class="sheet-editor-container">
+            <h2>{{localize "godbound.common.notes"}}</h2>
+            {{editor content=data.data.notes target="data.notes" button=true owner=owner editable=editable}}
+        </div>
+    </div>
+    <div>
+        <table class="item-table">
+            <tr>
+                <th colspan="3">
+                    {{localize "godbound.effort.effort"}}
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    {{localize "godbound.effort.committed"}}
+                </th>
+                <th>
+                    {{localize "godbound.effort.available"}}
+                </th>
+                <th>
+                    {{localize "godbound.effort.maximum"}}
+                </th>
+            </tr>
+            <tr>
+                <td class="item-table-data">
+                    {{data.data.artifactEffort.value}}
+                </td>
+                <td class="item-table-data">
+                    {{subtract data.data.artifactEffort.max data.data.artifactEffort.value}}
+                </td>
+                <td class="item-table-data">
+                    <input name="data.artifactEffort.max" class="item-table-input" type="number" step="1" 
+                    value="{{data.data.artifactEffort.max}}" data-dtype="Number"/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+</form>

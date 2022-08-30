@@ -1,0 +1,24 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
+        <h1><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'Name' }}"/></h1>
+    </header>
+    
+    <div class="editor-section-container" style="min-height: 150px;">
+        <div class="sheet-editor-container">
+            <h2>{{localize "godbound.common.description"}}</h2>
+            {{editor content=data.data.description target="data.description" button=true owner=owner editable=editable}}
+        </div>
+        <div class="sheet-editor-container">
+            <h2>{{localize "godbound.common.notes"}}</h2>
+            {{editor content=data.data.notes target="data.notes" button=true owner=owner editable=editable}}
+        </div>
+    </div>
+    <hr>
+    <div>
+        <label for="item-quantity">{{localize "godbound.common.quantity"}}</label>
+        <input name="data.quantity" class="item-input" type="number" step="1" 
+            value="{{data.data.quantity}}" data-dtype="Number" id="item-quantity"/>
+    </div>
+    
+</form>

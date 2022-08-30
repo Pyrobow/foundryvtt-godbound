@@ -12,13 +12,23 @@
 // Import TypeScript modules
 import { registerSettings } from './settings';
 import { preloadTemplates } from './preloadTemplates';
+import { godbound } from './config';
+import registerHelpers from './handlebarHelpers';
+import GodboundItemSheet from './sheets/items/GodboundItemSheet';
+
+declare global {
+  interface CONFIG {
+    // eslint-disable-next-line @typescript-eslint/ban-types
+    godbound: Object;
+  }
+}
 
 // Initialize system
 Hooks.once('init', async () => {
   console.log('godbound | Initializing godbound');
 
   // Assign custom classes and constants here
-
+  CONFIG.godbound = godbound;
   // Register custom system settings
   registerSettings();
 
@@ -26,6 +36,9 @@ Hooks.once('init', async () => {
   await preloadTemplates();
 
   // Register custom sheets (if any)
+  Items.unregisterSheet('core', ItemSheet);
+  Items.registerSheet('godbound', GodboundItemSheet, { makeDefault: true });
+  registerHelpers();
 });
 
 // Setup system
