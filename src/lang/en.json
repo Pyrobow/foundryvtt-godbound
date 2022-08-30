@@ -1,1 +1,128 @@
-{}
+{
+  "godbound": {
+    "common": {
+      "description": "Description",
+      "notes": "Notes",
+      "attribute": "Attribute",
+      "attackBonus": "Attack Bonus",
+      "type": "Type",
+      "quantity": "Quantity",
+      "bool": {
+        "true": "True",
+        "false": "False"
+      }
+    },
+    "attributes": {
+      "str": "Strength",
+      "dex": "Dexterity",
+      "con": "Constitution",
+      "wis": "Wisdom",
+      "int": "Intelligence",
+      "cha": "Charisma"
+    },
+    "saves": {
+      "evasion": "Evasion",
+      "spirit": "Spirit",
+      "hardiness": "Hardiness"
+    },
+    "weapon": {
+      "damage": "Damage",
+      "range": "Range",
+      "isThrown": "isThrown",
+      "isMagic": "isMagic",
+      "isStraight": "isStraight",
+      "attackBonusMod": "Attack Bonus Mod",
+      "weaponTypes": {
+        "unarmed": "Unarmed",
+        "light": "Light",
+        "medium": "Medium",
+        "heavy": "Heavy",
+        "oneHandRanged": "1H Ranged",
+        "twoHandRanged": "2H Ranged"
+      }
+    },
+    "armour": {
+      "armourTypes": {
+        "light": "Light",
+        "medium": "Medium",
+        "heavy": "Heavy"
+      },
+      "baseAC": "Base AC",
+      "isEquipped": "isEquipped",
+      "isShield": "isShield",
+      "shieldModifier": "Shield Modifier",
+      "affectedSaves": "Affected Saves"
+    },
+    "divineGift": {
+      "sourceName": "Source Name",
+      "sourceType": "Source Type",
+      "isSmite": "isSmite",
+      "sourceTypes": {
+        "word": "Word",
+        "artifact": "Artifact",
+        "other": "Other"
+      },
+      "actionType": "Action Type"
+    },
+    "effort": {
+      "committedEffort": "Committed Effort",
+      "committedFor": "Committed For",
+      "effort": "Effort",
+      "committed": "Committed",
+      "available": "Available",
+      "maximum": "Maximum",
+      "committedTimes": {
+        "ongoing": "Ongoing",
+        "scene": "Scene",
+        "day": "Day"
+      }
+    },
+    "actions": {
+      "actionTypes": {
+        "constant": "Constant",
+        "onTurn": "On Turn",
+        "instant": "Instant",
+        "action": "Action"
+      }
+    },
+    "strifes": {
+      "strife": "Strife",
+      "trueStrife": "True Strife",
+      "theLesserStrife": "The Lesser Strife",
+      "isLesser": "isLesser",
+      "lesserMastery": "Lesser Mastery",
+      "lesserStrifeMasteries": {
+        "initiate": "Initiate",
+        "disciple": "Disciple",
+        "master": "Master"
+      }
+    },
+    "lowMagic": {
+      "masteryLevel": "Mastery Level",
+      "castingType": "Casting Type",
+      "lowMagicMasteries": {
+        "apprentice": "Apprentice",
+        "adept": "Adept",
+        "master": "Master",
+        "archmage": "Archmage"
+      },
+      "castingTypes": {
+        "instant": "Instant",
+        "prepared": "Prepared"
+      }
+    },
+    "thaumaturgy": {
+      "invocation": "Invocation",
+      "invocationLevel": "Invocation Level",
+      "arcaneConnectionRequired": "Arcane Connection Required",
+      "sceneEffort": "Committed Effort (Scene)",
+      "dayEffort": "Committed Effort (Day)",
+      "instantCastDamage": "Instant Cast Damage",
+      "invocationLevels": {
+        "gate": "Gate",
+        "way": "Way",
+        "throne": "Throne"
+      }
+    }
+  }
+}

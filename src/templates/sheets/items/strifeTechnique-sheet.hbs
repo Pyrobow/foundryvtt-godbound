@@ -1,0 +1,86 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
+        <h1><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'Name' }}"/></h1>
+    </header>
+    
+    <div class="editor-section-container" style="min-height: 150px;">
+        <div class="sheet-editor-container">
+            <h2>{{localize "godbound.common.description"}}</h2>
+            {{editor content=data.data.description target="data.description" button=true owner=owner editable=editable}}
+        </div>
+        <div class="sheet-editor-container">
+            <h2>{{localize "godbound.common.notes"}}</h2>
+            {{editor content=data.data.notes target="data.notes" button=true owner=owner editable=editable}}
+        </div>
+    </div>
+    <div>
+        <table class="item-table">
+            <tr>
+                <th>
+                    {{localize "godbound.divineGift.sourceName"}}
+                </th>
+                <th>
+                    {{localize "godbound.divineGift.sourceType"}}
+                </th>
+                <th>
+                    {{localize "godbound.divineGift.isSmite"}}
+                </th>
+            </tr>
+            <tr>
+                <td class="item-table-data">
+                    <input name="data.sourceName" class="item-table-input" type="text" value="{{data.data.sourceName}}" /> 
+                </td>
+                <td class="item-table-data">
+                    <select name="data.sourceType" class="item-table-select">
+                            {{#select data.data.sourceType}}
+                            {{#each config.strifes.strifeSourceTypes as |name type|}}
+                            <option value="{{type}}">{{localize name}}</option>
+                            {{/each}}
+                            {{/select}}
+                        </select> 
+                </td>
+                <td class="item-table-data">
+                    <input name="data.isSmite" class="item-table-input" type="checkbox" {{checked data.data.isSmite}}/>
+                </td>
+            </tr>
+        </table>
+        <table class="item-table">
+            <tr>
+                <th>
+                    {{localize "godbound.effort.committedEffort"}}
+                </th>
+                <th>
+                    {{localize "godbound.effort.committedFor"}}
+                </th>
+                <th>
+                    {{localize "godbound.divineGift.actionType"}}
+                </th>
+            </tr>
+            <tr>
+                <td class="item-table-data">
+                    <input name="data.committedEffort" class="item-table-input" type="number" value="{{data.data.committedEffort}}" data-dtype="Number"/> 
+                </td>
+                <td class="item-table-data">
+                    <select name="data.committedFor" class="item-table-select">
+                            {{#select data.data.committedFor}}
+                            {{#each config.effort.committedTimes as |name type|}}
+                            <option value="{{type}}">{{localize name}}</option>
+                            {{/each}}
+                            {{/select}}
+                    </select>
+                </td>
+                <td class="item-table-data">
+                    <select name="data.actionType" class="item-table-select">
+                            {{#select data.data.actionType}}
+                            {{#each config.actions.actionTypes as |name type|}}
+                            <option value="{{type}}">{{localize name}}</option>
+                            {{/each}}
+                            {{/select}}
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+</form>

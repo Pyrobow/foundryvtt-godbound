@@ -1,0 +1,97 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
+        <h1><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'Name' }}"/></h1>
+    </header>
+    <div>
+        <div class="editor-section-container">
+            <div class="sheet-editor-container">
+                <h2>{{localize "godbound.common.description"}}</h2>
+                {{editor content=data.data.description target="data.description" button=true owner=owner editable=editable}}
+            </div>
+            <div class="sheet-editor-container">
+                <h2>{{localize "godbound.common.notes"}}</h2>
+                {{editor content=data.data.notes target="data.notes" button=true owner=owner editable=editable}}
+            </div>
+        </div>
+        <div>
+            <table class="item-table">
+                <tr>
+                    <th>
+                        {{localize "godbound.common.type"}}
+                    </th>
+                    <th>
+                        {{localize "godbound.armour.baseAC"}}
+                    </th>
+                    <th>
+                        {{localize "godbound.armour.isEquipped"}}
+                    </th>
+                </tr>
+                <tr>
+                    <td class="item-table-data">
+                        <select name="data.type">
+                            {{#select data.data.type}}
+                            {{#each config.armourTypes as |name type|}}
+                            <option value="{{type}}">{{localize name}}</option>
+                            {{/each}}
+                            {{/select}}
+                        </select>
+                    </td>
+                    <td class="item-table-data">
+                        <input name="data.baseAC" class="item-table-input" type="number" value="{{data.data.baseAC}}" data-dtype="Number" /> 
+                    </td>
+                    <td class="item-table-data">
+                        <input name="data.isEquipped" class="item-table-input" type="checkbox" {{checked data.data.isEquipped}}/>
+                    </td>
+                </tr>
+            </table>
+            <table class="item-table">
+                <tr>
+                    <th>
+                        {{localize "godbound.armour.isShield"}}
+                    </th>
+                    <th>
+                        {{localize "godbound.armour.shieldModifier"}}
+                    </th>
+                </tr>
+                <tr>
+                    <td class="item-table-data">
+                        <input name="data.isShield" class="item-table-input" type="checkbox" {{checked data.data.isShield}}/>
+                    </td>
+                    <td class="item-table-data">
+                        <input name="data.shieldModifier" class="item-table-input" type="number" value="{{data.data.shieldModifier}}" data-dtype="Number" /> 
+                    </td>
+                </tr>
+            </table>
+            <table class="item-table">
+                <tr>
+                    <th colspan="3">
+                        {{localize "godbound.armour.affectedSaves"}}
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        {{localize "godbound.saves.hardiness"}}
+                    </th>
+                    <th>
+                        {{localize "godbound.saves.evasion"}}
+                    </th>
+                    <th>
+                        {{localize "godbound.saves.spirit"}}
+                    </th>
+                </tr>
+                <tr>
+                    <td class="item-table-data">
+                        <input name="data.affectedSaves.hardiness" class="item-table-input" type="checkbox" {{checked data.data.affectedSaves.hardiness}}/>
+                    </td>
+                    <td class="item-table-data">
+                        <input name="data.affectedSaves.evasion" class="item-table-input" type="checkbox" {{checked data.data.affectedSaves.evasion}}/>
+                    </td>
+                    <td class="item-table-data">
+                        <input name="data.affectedSaves.spirit" class="item-table-input" type="checkbox" {{checked data.data.affectedSaves.spirit}}/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</form>

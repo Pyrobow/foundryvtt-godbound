@@ -24,6 +24,7 @@
           "value": 9,
           "mod": 0
         },
+        "attackBonus": 0,
         "biography": {
           "description": "",
           "goal": "",
@@ -127,7 +128,6 @@
         "amount": 1,
         "range": "melee",
         "area": "single-target",
-        "attackBonus": 0,
         "damage": {
           "dice": "1d6",
           "straight": false
@@ -140,13 +140,13 @@
   },
   "Item": {
     "types": [
-      "facts",
+      "fact",
       "armour",
-      "weapons",
-      "words",
-      "divineGifts",
-      "strifes",
-      "strifeTechniques",
+      "weapon",
+      "word",
+      "divineGift",
+      "strife",
+      "strifeTechnique",
       "lowMagic",
       "thaumaturgy",
       "artifact",
@@ -160,13 +160,13 @@
         "notes": ""
       }
     },
-    "facts": {
+    "fact": {
       "templates": ["common"],
       "factModifier": 4
     },
     "armour": {
       "templates": ["common"],
-      "baseAc": 9,
+      "baseAC": 9,
       "isEquipped": false,
       "type": "light",
       "isShield": false,
@@ -177,7 +177,7 @@
         "spirit": false
       }
     },
-    "weapons": {
+    "weapon": {
       "templates": ["common"],
       "type": "unarmed",
       "damage": {
@@ -186,47 +186,46 @@
         "isStraight": false
       },
       "attribute": "",
-      "melee": true,
+      "isThrown": false,
       "range": 0,
-      "attackBonus": 0,
+      "attackBonusMod": 0,
       "quantity": 1
     },
-    "words": {
+    "word": {
       "templates": ["common"]
     },
-    "divineGifts": {
+    "divineGift": {
       "templates": ["common"],
       "sourceName": "",
-      "sourceType": "",
-      "effort": 0,
-      "time": "scene",
-      "activation": "action",
-      "smite": false
+      "sourceType": "Word",
+      "committedEffort": 0,
+      "committedFor": "scene",
+      "actionType": "action",
+      "isSmite": false
     },
-    "strifes": {
+    "strife": {
       "templates": ["common"],
       "isLesser": false,
-      "lesserLevel": "",
+      "lesserMastery": "",
       "lesserDescription": ""
     },
-    "strifeTechniques": {
+    "strifeTechnique": {
       "templates": ["common"],
       "sourceName": "",
       "sourceType": "",
-      "effort": 0,
-      "time": "scene",
-      "activation": "action",
-      "smite": false
+      "committedEffort": 0,
+      "committedFor": "scene",
+      "actionType": "action",
+      "isSmite": false
     },
     "lowMagic": {
       "templates": ["common"],
-      "lowMagicLevel": "initiate",
+      "lowMagicMastery": "initiate",
       "castingType": "prepared"
     },
     "thaumaturgy": {
       "templates": ["common"],
-      "invocation": "gate",
-      "timeToLearn": "1-week",
+      "invocation": "Gate",
       "arcaneConnectionRequired": false,
       "sceneEffort": 0,
       "dayEffort": 0,
@@ -237,15 +236,15 @@
       "dominionCreationCost": 0,
       "celestialShardCreationCost": 0,
       "artifactEffort": {
-        "value": 1,
+        "value": 0,
         "max": 1
       }
     },
     "ability": {
       "templates": ["common"],
-      "effort": 0,
-      "time": "scene",
-      "activation": "action",
+      "committedEffort": 0,
+      "committedFor": "scene",
+      "actionType": "action",
       "smite": false
     },
     "item": {
