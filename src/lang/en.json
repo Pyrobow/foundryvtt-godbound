@@ -12,6 +12,17 @@
         "false": "False"
       }
     },
+    "sheet": {
+      "name": "Name",
+      "hp": "HP",
+      "ac": "AC",
+      "wealth": "Wealth",
+      "xp": "XP",
+      "level": "Level",
+      "attributes": "Attribute",
+      "mod": "Mod",
+      "value": "Value"
+    },
     "attributes": {
       "str": "Strength",
       "dex": "Dexterity",

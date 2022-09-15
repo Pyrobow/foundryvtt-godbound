@@ -21,6 +21,7 @@
           }
         },
         "ac": {
+          "base": 9,
           "value": 9,
           "mod": 0
         },
@@ -44,38 +45,32 @@
       "templates": ["common"],
       "attributes": {
         "str": {
-          "value": 0,
-          "bonus": 0,
+          "value": 10,
           "mod": 0,
           "tweak": 0
         },
         "dex": {
-          "value": 0,
-          "bonus": 0,
+          "value": 10,
           "mod": 0,
           "tweak": 0
         },
         "con": {
-          "value": 0,
-          "bonus": 0,
+          "value": 10,
           "mod": 0,
           "tweak": 0
         },
         "wis": {
-          "value": 0,
-          "bonus": 0,
+          "value": 10,
           "mod": 0,
           "tweak": 0
         },
         "int": {
-          "value": 0,
-          "bonus": 0,
+          "value": 10,
           "mod": 0,
           "tweak": 0
         },
         "cha": {
-          "value": 0,
-          "bonus": 0,
+          "value": 10,
           "mod": 0,
           "tweak": 0
         }
@@ -88,6 +83,7 @@
         }
       },
       "hp": {
+        "min": 0,
         "value": 8,
         "max": 8
       },
