@@ -93,7 +93,10 @@
       "resources": {
         "effort": {
           "value": 2,
-          "max": 2
+          "max": 2,
+          "day": 0,
+          "scene": 0,
+          "ongoing": 0
         },
         "influence": {
           "value": 0,

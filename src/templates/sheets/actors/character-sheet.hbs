@@ -113,6 +113,87 @@
         </table>
 
       </div>
+      <div class='effort'>
+        <table>
+          <thead>
+            <tr>
+              <th>
+                {{localize 'godbound.effort.effort'}}
+              </th>
+            </tr>
+          </thead>
+          <td>
+            <table>
+              <thead>
+                <tr>
+                  <th>
+                    {{localize 'godbound.effort.available'}}
+                  </th>
+                  <th>
+                    {{localize 'godbound.effort.maximum'}}
+                  </th>
+                </tr>
+              </thead>
+              <tr>
+                <td>
+                  {{actor.data.data.resources.effort.value}}
+                </td>
+                <td>
+                  {{actor.data.data.resources.effort.max}}
+                </td>
+              </tr>
+            </table>
+            <table>
+              <thead>
+                <tr>
+                  <th>
+                    {{localize 'godbound.effort.committedTimes.ongoing'}}
+                  </th>
+                  <th>
+                    {{localize 'godbound.effort.committedTimes.scene'}}
+                  </th>
+                  <th>
+                    {{localize 'godbound.effort.committedTimes.day'}}
+                  </th>
+                </tr>
+              </thead>
+              <tr>
+                <td>
+                  {{actor.data.data.resources.effort.ongoing}}
+                </td>
+                <td>
+                  {{actor.data.data.resources.effort.scene}}
+                </td>
+                <td>
+                  {{actor.data.data.resources.effort.day}}
+                </td>
+              </tr>
+            </table>
+          </td>
+        </table>
+      </div>
+      <div class='saves'>
+        <div data-save-type='hardiness' class='save'>
+          {{localize 'godbound.saves.hardiness'}}
+          v{{subtract actor.data.data.saves.hardiness.base actor.data.data.saves.hardiness.mod}}
+          <i class='fas fa-dice-d20'></i>
+        </div>
+        <div data-save-type='evasion' class='save'>
+          {{localize 'godbound.saves.evasion'}}
+          v{{subtract actor.data.data.saves.hardiness.base actor.data.data.saves.hardiness.mod}}
+          <i class='fas fa-dice-d20'></i>
+        </div>
+        <div data-save-type='spirit' class='save'>
+          {{localize 'godbound.saves.spirit'}}
+          v{{subtract actor.data.data.saves.hardiness.base actor.data.data.saves.hardiness.mod}}
+          <i class='fas fa-dice-d20'></i>
+        </div>
+      </div>
+    </div>
+    <div class='main-body-center'>
+      <nav>
+
+      </nav>
     </div>
   </div>
 </form>

@@ -7,10 +7,12 @@
   .header-bar {
     display: flex;
     gap: 2px;
+
     .profile-img {
       width: 6rem;
       height: 6rem;
     }
+
     .header-info {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -21,29 +23,34 @@
       justify-items: center;
       gap: 5px;
       padding-left: 3px;
+
       .name {
         grid-area: name;
         font-size: 1.5rem;
         padding: 1rem;
       }
+
       .hp {
         grid-area: hp;
         display: flex;
         align-items: center;
         text-align: center;
       }
+
       .ac {
         grid-area: ac;
         display: flex;
         align-items: center;
         text-align: center;
       }
+
       .xp {
         grid-area: xp;
         display: flex;
         align-items: center;
         text-align: center;
       }
+
       .level {
         grid-area: level;
         display: flex;
@@ -52,7 +59,14 @@
       }
     }
   }
+
+  .main-body {
+    .sidebar {
+      text-align: center;
+    }
+  }
 }
+
 .label-padding {
   padding-right: 3px;
 }
