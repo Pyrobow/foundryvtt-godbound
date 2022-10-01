@@ -1,7 +1,15 @@
-<form class='{{cssClass}}' autocomplete='off'>
+<form
+  class='{{cssClass}}'
+  autocomplete='off'
+>
   <div class=''>
     <div class='header-bar'>
-      <img class='profile-img' src='{{actor.img}}' title='{{actor.name}}' data-edit='img' />
+      <img
+        class='profile-img'
+        src='{{actor.img}}'
+        title='{{actor.name}}'
+        data-edit='img'
+      />
       <div class='header-info'>
         <input
           class='name'
@@ -173,17 +181,26 @@
         </table>
       </div>
       <div class='saves'>
-        <div data-save-type='hardiness' class='save'>
+        <div
+          data-save-type='hardiness'
+          class='save'
+        >
           {{localize 'godbound.saves.hardiness'}}
           v{{subtract actor.data.data.saves.hardiness.base actor.data.data.saves.hardiness.mod}}
           <i class='fas fa-dice-d20'></i>
         </div>
-        <div data-save-type='evasion' class='save'>
+        <div
+          data-save-type='evasion'
+          class='save'
+        >
           {{localize 'godbound.saves.evasion'}}
           v{{subtract actor.data.data.saves.hardiness.base actor.data.data.saves.hardiness.mod}}
           <i class='fas fa-dice-d20'></i>
         </div>
-        <div data-save-type='spirit' class='save'>
+        <div
+          data-save-type='spirit'
+          class='save'
+        >
           {{localize 'godbound.saves.spirit'}}
           v{{subtract actor.data.data.saves.hardiness.base actor.data.data.saves.hardiness.mod}}
           <i class='fas fa-dice-d20'></i>
@@ -191,9 +208,149 @@
       </div>
     </div>
     <div class='main-body-center'>
-      <nav>
-
+      <nav
+        data-group="primary"
+        class="pc-sheet-tabs"
+      >
+        <a
+          class="tab-button"
+          data-tab="biography"
+        >
+          {{localize 'godbound.sheet.tabs.biography'}}
+        </a>
+        <a
+          class="tab-button"
+          data-tab="combat"
+        >
+          {{localize 'godbound.sheet.tabs.combat'}}
+        </a>
+        <a
+          class="tab-button"
+          data-tab="divinity"
+        >
+          {{localize 'godbound.sheet.tabs.divinity'}}
+        </a>
+        <a
+          class="tab-button"
+          data-tab="arts"
+        >
+          {{localize 'godbound.sheet.tabs.arts'}}
+        </a>
+        <a
+          class="tab-button"
+          data-tab="projects"
+        >
+          {{localize 'godbound.sheet.tabs.projects'}}
+        </a>
+        <a
+          class="tab-button"
+          data-tab="other"
+        >
+          {{localize 'godbound.sheet.tabs.other'}}
+        </a>
       </nav>
+      <section class="pc-sheet-body">
+        <div
+          class="tab biography"
+          data-group="primary"
+          data-tab="biography"
+        >
+          <div class="description sheet-editor-container">
+            <h2>{{localize "godbound.common.description"}}</h2>
+            {{editor content=data.data.description target="data.description" button=true owner=owner editable=editable}}
+          </div>
+          <div class="facts">
+            <h2>{{localize "godbound.sheet.biography.facts"}}</h2>
+            {{#each facts as |fact id|}}
+              {{> "systems/godbound/templates/sheets/partials/character-fact-card.hbs" fact}}
+            {{/each}}
+          </div>
+        </div>
+        <div
+          class="tab combat"
+          data-group="primary"
+          data-tab="combat"
+        >
+          <div>
+            <div class="attacks-section">
+              <li class="item-titles flexrow">
+                <div>{{localize "godbound.sheet.combat.attacks"}}</div>
+                <div title="{{localize "godbound.weapon.damage"}}"><i class="fas fa-tint"></i></div>
+                <div title="{{localize "godbound.common.attackBonus"}}"><i class="fas fa-solid fa-crosshairs"></i></div>
+                <div title="{{localize "godbound.common.quantity"}}"><i class="fas fa-solid fa-hashtag"></i></div>
+              </li>
+              <ol class="item-list">
+                {{#each weapons as |weapon id|}}
+                  {{> "systems/godbound/templates/sheets/partials/character-weapon-card.hbs"}}
+                {{/each}}
+              </ol>
+            </div>
+            <div class="defences-section">
+              <li class="item-titles flexrow">
+                <div>{{localize "godbound.sheet.combat.defences"}}</div>
+                <div title="{{localize "godbound.sheet.ac"}}"><i class="fas fa-shield-alt"></i></div>
+                <div title="{{localize "godbound.common.attackBonus"}}"><i class="fas fa-solid fa-crosshairs"></i></div>
+                <div title="{{localize "godbound.common.quantity"}}"><i class="fas fa-solid fa-hashtag"></i></div>
+              </li>
+              <ol class="item-list">
+                {{#each weapons as |weapon id|}}
+                  {{> "systems/godbound/templates/sheets/partials/character-weapon-card.hbs"}}
+                {{/each}}
+              </ol>
+              <h2>{{localize "godbound.sheet.combat.defences"}}</h2>
+              <div>
+                <div>
+                  <label class='label-padding'>{{localize 'godbound.sheet.combat.baseAc'}}:</label>
+                  <input
+                    type='number'
+                    name='data.ac.base'
+                    value='{{actor.data.data.ac.base}}'
+                    step='1'
+                    min='1'
+                    data-dtype='Number'
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab divinity"
+          data-group="primary"
+          data-tab="divinity"
+        >
+          <div>
+            divinity
+          </div>
+        </div>
+        <div
+          class="tab arts"
+          data-group="primary"
+          data-tab="arts"
+        >
+          <div>
+            arts
+          </div>
+        </div>
+        <div
+          class="tab projects"
+          data-group="primary"
+          data-tab="projects"
+        >
+          <div>
+            projects
+          </div>
+        </div>
+        <div
+          class="tab other"
+          data-group="primary"
+          data-tab="other"
+        >
+          <div>
+            other
+          </div>
+        </div>
+      </section>
     </div>
   </div>
 </form>

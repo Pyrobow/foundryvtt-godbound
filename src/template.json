@@ -188,6 +188,7 @@
       "isThrown": false,
       "range": 0,
       "attackBonusMod": 0,
+      "finalAttackBonus": 0,
       "quantity": 1
     },
     "word": {

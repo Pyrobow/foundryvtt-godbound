@@ -21,7 +21,23 @@
       "level": "Level",
       "attributes": "Attribute",
       "mod": "Mod",
-      "value": "Value"
+      "value": "Value",
+      "tabs": {
+        "biography": "Biography",
+        "combat": "Combat",
+        "divinity": "Divinity",
+        "arts": "Arts",
+        "projects": "Projects",
+        "other": "Other"
+      },
+      "biography": {
+        "facts": "Facts"
+      },
+      "combat": {
+        "attacks": "Attacks",
+        "defences": "Defences",
+        "baseAc": "Base AC"
+      }
     },
     "attributes": {
       "str": "Strength",
