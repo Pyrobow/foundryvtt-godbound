@@ -281,23 +281,23 @@
               </li>
               <ol class="item-list">
                 {{#each weapons as |weapon id|}}
-                  {{> "systems/godbound/templates/sheets/partials/character-weapon-card.hbs"}}
+                  {{> "systems/godbound/templates/sheets/partials/character-weapon-card.hbs" weapon}}
                 {{/each}}
               </ol>
             </div>
             <div class="defences-section">
               <li class="item-titles flexrow">
                 <div>{{localize "godbound.sheet.combat.defences"}}</div>
-                <div title="{{localize "godbound.sheet.ac"}}"><i class="fas fa-shield-alt"></i></div>
-                <div title="{{localize "godbound.common.attackBonus"}}"><i class="fas fa-solid fa-crosshairs"></i></div>
-                <div title="{{localize "godbound.common.quantity"}}"><i class="fas fa-solid fa-hashtag"></i></div>
+                <div>{{localize "godbound.sheet.ac"}}</div>
+                <div title="{{localize "godbound.armour.isShield"}}"><i class="fas fa-shield-alt"></i></div>
+                <div title="{{localize "godbound.armour.shieldModifier"}}">{{localize "godbound.sheet.mod"}}</div>
               </li>
               <ol class="item-list">
-                {{#each weapons as |weapon id|}}
-                  {{> "systems/godbound/templates/sheets/partials/character-weapon-card.hbs"}}
+                {{#each armours as |armour id|}}
+                  {{> "systems/godbound/templates/sheets/partials/character-armour-card.hbs" armour}}
                 {{/each}}
               </ol>
-              <h2>{{localize "godbound.sheet.combat.defences"}}</h2>
+              {{!-- <h2>{{localize "godbound.sheet.combat.defences"}}</h2>
               <div>
                 <div>
                   <label class='label-padding'>{{localize 'godbound.sheet.combat.baseAc'}}:</label>
@@ -310,7 +310,7 @@
                     data-dtype='Number'
                   />
                 </div>
-              </div>
+              </div> --}}
             </div>
           </div>
         </div>
