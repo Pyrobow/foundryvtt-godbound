@@ -305,8 +305,21 @@
           data-group="primary"
           data-tab="divinity"
         >
-          <div>
-            divinity
+          <div class="words-section">
+            <h2>{{localize "godbound.sheet.divinity.words.words-header"}}</h2>
+            <ol class="words-list">
+              {{#each words as |word id|}}
+                {{> "systems/godbound/templates/sheets/partials/character-word-card.hbs" word}}
+              {{/each}}
+            </ol>
+          </div>
+          <div class="artifacts-section">
+            <h2>{{localize "godbound.sheet.divinity.artifacts.artifacts-header"}}</h2>
+            <ol class="artifact-list">
+              {{#each artifacts as |artifact id|}}
+                {{> "systems/godbound/templates/sheets/partials/character-artifact-card.hbs" artifact}}
+              {{/each}}
+            </ol>
           </div>
         </div>
         <div

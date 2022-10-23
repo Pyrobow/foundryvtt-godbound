@@ -37,6 +37,15 @@
         "attacks": "Attacks",
         "defences": "Defences",
         "baseAc": "Base AC"
+      },
+      "divinity": {
+        "words": {
+          "words-header": "Words"
+        },
+        "gifts": {},
+        "artifacts": {
+          "artifacts-header": "Artifacts"
+        }
       }
     },
     "attributes": {
