@@ -23,9 +23,9 @@ export default class GodboundCharacterSheet extends ActorSheet {
     data.facts = this.actor.items.filter((i) => i.type === 'fact');
     data.weapons = this.actor.items.filter((i) => i.type === 'weapon');
     data.armours = this.actor.items.filter((i) => i.type === 'armour');
-    data.words = this.actor.items.filter((i) => i.type === 'words');
-    data.artifacts = this.actor.items.filter((i) => i.type === 'artifacts');
-    data.wordGifts = this.actor.items.filter((i) => i.type === 'gift');
+    data.words = this.actor.items.filter((i) => i.type === 'word');
+    data.artifacts = this.actor.items.filter((i) => i.type === 'artifact');
+    data.gifts = this.actor.items.filter((i) => i.type === 'divineGift');
     return data;
   }
 }

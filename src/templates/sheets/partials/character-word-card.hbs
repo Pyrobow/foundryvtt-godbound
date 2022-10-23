@@ -1,8 +1,13 @@
-<div class='character-fact-card'>
-  <div class='fact-info fact-name'>
-    <a>{{name}}:</a>
+<div class='character-word-card'>
+  <div class='word-info word-name'>
+    <a>{{activeWord.name}}:</a>
   </div>
-  <div class='fact-info fact-description'>
-    {{{data.data.description}}}
+  <div class='word-info word-description'>
+    {{{activeWord.data.data.description}}}
   </div>
+  {{#each gifts as |gift id|}}
+    {{#if (checkEquals gift.data.data.sourceName ../activeWord.name)}}
+      {{> "systems/godbound/templates/sheets/partials/character-gift-card.hbs" gift}}
+    {{/if}}
+  {{/each}}
 </div>

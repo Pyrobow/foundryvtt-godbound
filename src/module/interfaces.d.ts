@@ -14,8 +14,7 @@ interface GodboundCharacterSheetData extends ActorSheet.Data {
   armours?: Item[];
   facts?: Item[];
   words?: Item[];
-  wordGifts?: Item[];
-  artifactGifts?: Item[];
+  gifts?: Item[];
   strifes?: Item[];
   strifeTechniques?: Item[];
   lowMagic?: Item[];

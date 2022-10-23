@@ -22,6 +22,10 @@ declare global {
     // eslint-disable-next-line @typescript-eslint/ban-types
     godbound: Object;
   }
+
+  interface LenientGlobalVariableTypes {
+    game: true;
+  }
 }
 
 // Initialize system

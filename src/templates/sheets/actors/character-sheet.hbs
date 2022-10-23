@@ -309,7 +309,7 @@
             <h2>{{localize "godbound.sheet.divinity.words.words-header"}}</h2>
             <ol class="words-list">
               {{#each words as |word id|}}
-                {{> "systems/godbound/templates/sheets/partials/character-word-card.hbs" word}}
+                {{> "systems/godbound/templates/sheets/partials/character-word-card.hbs" (object activeWord=word gifts=../gifts)}}
               {{/each}}
             </ol>
           </div>
