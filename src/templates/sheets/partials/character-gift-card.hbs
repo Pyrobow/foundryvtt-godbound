@@ -1,8 +1,25 @@
-<div class='character-fact-card'>
-  <div class='fact-info fact-name'>
-    <a>{{name}}:</a>
+<li class='character-gift-card flexcol'>
+  <div class="gift-top-bar flexrow">
+    <div class='gift-info gift-name'>
+      <a>{{name}}</a>
+    </div>
+    <div class="word-effort-container flexrow">
+      <input
+        class="word-effort"
+        value="{{data.data.committedEffort}}"
+        type="number"
+      />
+    </div>
+    <div class="word-committed-for-container flexrow">
+      <input
+        class="word-committed-for"
+        value="{{data.data.committedFor}}"
+        type="text"
+        readonly
+      />
+    </div>
   </div>
-  <div class='fact-info fact-description'>
+  <div class='gift-info gift-description'>
     {{{data.data.description}}}
   </div>
-</div>
+</li>

@@ -275,11 +275,20 @@
             <div class="attacks-section">
               <li class="item-titles flexrow">
                 <div>{{localize "godbound.sheet.combat.attacks"}}</div>
-                <div title="{{localize "godbound.weapon.damage"}}"><i class="fas fa-tint"></i></div>
-                <div title="{{localize "godbound.common.attackBonus"}}"><i class="fas fa-solid fa-crosshairs"></i></div>
-                <div title="{{localize "godbound.common.quantity"}}"><i class="fas fa-solid fa-hashtag"></i></div>
+                <div
+                  title="{{localize "
+                  godbound.weapon.damage"}}"
+                ><i class="fas fa-tint"></i></div>
+                <div
+                  title="{{localize "
+                  godbound.common.attackBonus"}}"
+                ><i class="fas fa-solid fa-crosshairs"></i></div>
+                <div
+                  title="{{localize "
+                  godbound.common.quantity"}}"
+                ><i class="fas fa-solid fa-hashtag"></i></div>
               </li>
-              <ol class="item-list">
+              <ol class="item-list no-style-list">
                 {{#each weapons as |weapon id|}}
                   {{> "systems/godbound/templates/sheets/partials/character-weapon-card.hbs" weapon}}
                 {{/each}}
@@ -289,10 +298,16 @@
               <li class="item-titles flexrow">
                 <div>{{localize "godbound.sheet.combat.defences"}}</div>
                 <div>{{localize "godbound.sheet.ac"}}</div>
-                <div title="{{localize "godbound.armour.isShield"}}"><i class="fas fa-shield-alt"></i></div>
-                <div title="{{localize "godbound.armour.shieldModifier"}}">{{localize "godbound.sheet.mod"}}</div>
+                <div
+                  title="{{localize "
+                  godbound.armour.isShield"}}"
+                ><i class="fas fa-shield-alt"></i></div>
+                <div
+                  title="{{localize "
+                  godbound.armour.shieldModifier"}}"
+                >{{localize "godbound.sheet.mod"}}</div>
               </li>
-              <ol class="item-list">
+              <ol class="item-list no-style-list">
                 {{#each armours as |armour id|}}
                   {{> "systems/godbound/templates/sheets/partials/character-armour-card.hbs" armour}}
                 {{/each}}
@@ -307,19 +322,19 @@
         >
           <div class="words-section">
             <h2>{{localize "godbound.sheet.divinity.words.words-header"}}</h2>
-            <ol class="words-list">
+            <ul class="words-list no-style-list">
               {{#each words as |word id|}}
                 {{> "systems/godbound/templates/sheets/partials/character-word-card.hbs" (object activeWord=word gifts=../gifts)}}
               {{/each}}
-            </ol>
+            </ul>
           </div>
           <div class="artifacts-section">
             <h2>{{localize "godbound.sheet.divinity.artifacts.artifacts-header"}}</h2>
-            <ol class="artifact-list">
+            <ul class="artifact-list no-style-list">
               {{#each artifacts as |artifact id|}}
-                {{> "systems/godbound/templates/sheets/partials/character-artifact-card.hbs" artifact}}
+                {{> "systems/godbound/templates/sheets/partials/character-artifact-card.hbs" (object activeArtifact=artifact gifts=../gifts)}}
               {{/each}}
-            </ol>
+            </ul>
           </div>
         </div>
         <div

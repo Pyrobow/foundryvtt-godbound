@@ -192,7 +192,8 @@
       "quantity": 1
     },
     "word": {
-      "templates": ["common"]
+      "templates": ["common"],
+      "miracleEffort": 0
     },
     "divineGift": {
       "templates": ["common"],
