@@ -7,9 +7,52 @@
       "attackBonus": "Attack Bonus",
       "type": "Type",
       "quantity": "Quantity",
+      "time": "Time",
       "bool": {
         "true": "True",
         "false": "False"
+      }
+    },
+    "sheet": {
+      "name": "Name",
+      "hp": "HP",
+      "ac": "AC",
+      "wealth": "Wealth",
+      "xp": "XP",
+      "level": "Level",
+      "attributes": "Attribute",
+      "mod": "Mod",
+      "value": "Value",
+      "tabs": {
+        "biography": "Biography",
+        "combat": "Combat",
+        "divinity": "Divinity",
+        "arts": "Arts",
+        "projects": "Projects",
+        "other": "Other"
+      },
+      "biography": {
+        "facts": "Facts"
+      },
+      "combat": {
+        "attacks": "Attacks",
+        "defences": "Defences",
+        "baseAc": "Base AC"
+      },
+      "divinity": {
+        "words": {
+          "words-header": "Words",
+          "miracleEffort": "Miracle Effort",
+          "miracles": "Miracles"
+        },
+        "gifts": {
+          "gifts": "Gifts",
+          "gift": "Gift"
+        },
+        "artifacts": {
+          "artifacts-header": "Artifacts",
+          "artifactEffort": "Artifact Effort"
+        }
       }
     },
     "attributes": {

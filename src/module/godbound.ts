@@ -15,11 +15,16 @@ import { preloadTemplates } from './preloadTemplates';
 import { godbound } from './config';
 import registerHelpers from './handlebarHelpers';
 import GodboundItemSheet from './sheets/items/GodboundItemSheet';
+import GodboundCharacterSheet from './sheets/actors/GodboundCharacterSheet';
 
 declare global {
   interface CONFIG {
     // eslint-disable-next-line @typescript-eslint/ban-types
     godbound: Object;
+  }
+
+  interface LenientGlobalVariableTypes {
+    game: true;
   }
 }
 
@@ -38,6 +43,10 @@ Hooks.once('init', async () => {
   // Register custom sheets (if any)
   Items.unregisterSheet('core', ItemSheet);
   Items.registerSheet('godbound', GodboundItemSheet, { makeDefault: true });
+
+  Actors.unregisterSheet('core', ActorSheet);
+  Actors.registerSheet('godbound', GodboundCharacterSheet, { makeDefault: true });
+  // Register handlebars helpers
   registerHelpers();
 });
 
