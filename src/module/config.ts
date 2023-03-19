@@ -70,4 +70,18 @@ export const godbound = {
       throne: 'godbound.thaumaturgy.invocationLevels.throne',
     },
   },
+  projects: {
+    difficulty: {
+      plausible: 'godbound.projects.difficulties.plausible',
+      implausible: 'godbound.projects.difficulties.implausible',
+      impossible: 'godbound.projects.difficulties.impossible',
+    },
+    scope: {
+      village: 'godbound.projects.scopes.village',
+      city: 'godbound.projects.scopes.city',
+      nation: 'godbound.projects.scopes.nation',
+      region: 'godbound.projects.scopes.region',
+      realm: 'godbound.projects.scopes.realm',
+    },
+  },
 };

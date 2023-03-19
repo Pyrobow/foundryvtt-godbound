@@ -1,0 +1,19 @@
+<div class='character-project-card'>
+  <div class='project-top-bar flexrow'>
+    <div class='project-info project-name'>
+      <a>{{name}}</a>
+    </div>
+    <div class='project-dominion-container flexrow'>
+      <input class='project-dominion' value='{{data.data.dominionSpent}}' type='number' readonly />
+    </div>
+	<div class='project-influence-container flexrow'>
+      <input class='project-influence' value='{{data.data.influenceCommitted}}' type='number' readonly />
+    </div>
+	<div class='project-isCompleted'>
+      <input name='data.isCompleted' class='item-table-input' type='checkbox' {{checked data.data.isCompleted}} />
+    </div>
+  </div>
+  <div class='project-info project-description'>
+    {{{data.data.description}}}
+  </div>
+</div>

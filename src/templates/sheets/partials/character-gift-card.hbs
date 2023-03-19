@@ -1,0 +1,16 @@
+<li class='character-gift-card flexcol'>
+  <div class='gift-top-bar flexrow'>
+    <div class='gift-info gift-name'>
+      <a>{{name}}</a>
+    </div>
+    <div class='gift-effort-container flexrow'>
+      <input class='gift-effort' value='{{data.data.committedEffort}}' type='number' />
+    </div>
+    <div class='gift-committed-for-container flexrow'>
+      <input class='gift-committed-for' value='{{data.data.committedFor}}' type='text' readonly />
+    </div>
+  </div>
+  <div class='gift-info gift-description'>
+    {{{data.data.description}}}
+  </div>
+</li>

@@ -1,0 +1,30 @@
+<li class='character-strife-card flexcol'>
+  <div class="strife-section flexrow">
+    <div class='strife-info strife-name'>
+      <a>{{activeStrife.name}}</a>
+    </div>
+    <div class='strife-info strife-description'>
+      {{{activeStrife.data.data.description}}}
+    </div>
+  </div>
+  <div class="strifeTechniques-section">
+    <div class="strifeTechnique-titles flexrow">
+      <div>
+        {{localize "godbound.sheet.arts.strife.strifeTechniques.strifeTechnique"}}
+      </div>
+      <div title="{{localize "godbound.effort.committedEffort"}}">
+        {{localize "godbound.effort.effort"}}
+      </div>
+      <div title="{{localize "godbound.effort.committedFor"}}">
+        {{localize "godbound.common.time"}}
+      </div>
+    </div>
+    <ul class="strifeTechniques-list no-style-list">
+      {{#each strifeTechniques as |strifeTechnique id|}}
+        {{#if (checkEquals strifeTechnique.data.data.sourceName ../activeStrife.name)}}
+          {{> "systems/godbound/templates/sheets/partials/character-strifeTechnique-card.hbs" strifeTechnique}}
+        {{/if}}
+      {{/each}}
+    </ul>
+  </div>
+</li>

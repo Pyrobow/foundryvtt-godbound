@@ -14,10 +14,6 @@ export default class GodboundItemSheet extends ItemSheet {
     if (data instanceof Promise) data = await data;
 
     data.config = CONFIG.godbound;
-    console.log('Document:');
-    console.log(this.document.toObject());
-    console.log('All Data:');
-    console.log(data);
     return data;
   }
 }

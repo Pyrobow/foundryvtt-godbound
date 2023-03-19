@@ -1,0 +1,20 @@
+<li>
+  <div class='armour flexrow' data-armour-id='{{armour.id}}'>
+    <div class='armour-name'>
+      <a>
+        <h4 title='{{name}}'>
+          {{name}}
+        </h4>
+      </a>
+    </div>
+    <div class='armour-ac'>
+      <input value='{{data.data.baseAC}}' type='text' readonly />
+    </div>
+    <div class='armour-isShield'>
+      <input name='data.isShield' class='item-table-input' type='checkbox' {{checked data.data.isShield}} />
+    </div>
+    <div class='armour-shieldModifier'>
+      <input value='{{data.data.shieldModifier}}' type='number' readonly />
+    </div>
+  </div>
+</li>

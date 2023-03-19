@@ -93,7 +93,10 @@
       "resources": {
         "effort": {
           "value": 2,
-          "max": 2
+          "max": 2,
+          "day": 0,
+          "scene": 0,
+          "ongoing": 0
         },
         "influence": {
           "value": 0,
@@ -117,8 +120,11 @@
       },
       "morale": 10,
       "effort": {
-        "value": 0,
-        "max": 0
+        "value": 2,
+        "max": 2,
+        "day": 0,
+        "scene": 0,
+        "ongoing": 0
       },
       "attacks": {
         "amount": 1,
@@ -185,10 +191,12 @@
       "isThrown": false,
       "range": 0,
       "attackBonusMod": 0,
+      "finalAttackBonus": 0,
       "quantity": 1
     },
     "word": {
-      "templates": ["common"]
+      "templates": ["common"],
+      "miracleEffort": 0
     },
     "divineGift": {
       "templates": ["common"],
@@ -254,7 +262,7 @@
       "resistance": 0,
       "isCompleted": false,
       "dominionSpent": 0,
-      "influenceCommited": 0
+      "influenceCommitted": 0
     }
   }
 }

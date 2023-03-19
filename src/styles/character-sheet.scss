@@ -7,10 +7,12 @@
   .header-bar {
     display: flex;
     gap: 2px;
+
     .profile-img {
       width: 6rem;
       height: 6rem;
     }
+
     .header-info {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -21,29 +23,34 @@
       justify-items: center;
       gap: 5px;
       padding-left: 3px;
+
       .name {
         grid-area: name;
         font-size: 1.5rem;
         padding: 1rem;
       }
+
       .hp {
         grid-area: hp;
         display: flex;
         align-items: center;
         text-align: center;
       }
+
       .ac {
         grid-area: ac;
         display: flex;
         align-items: center;
         text-align: center;
       }
+
       .xp {
         grid-area: xp;
         display: flex;
         align-items: center;
         text-align: center;
       }
+
       .level {
         grid-area: level;
         display: flex;
@@ -52,11 +59,54 @@
       }
     }
   }
+
+  .main-body {
+    display: flex;
+
+    .sidebar {
+      text-align: center;
+      width: 25%;
+    }
+
+    .main-body-center {
+      width: 75%;
+      display: flex;
+      flex-direction: column;
+
+      .pc-sheet-tabs {
+        width: 100%;
+        text-align: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      }
+
+      .pc-sheet-body {
+        height: 100%;
+
+        .biography {
+          height: 100%;
+
+          .sheet-editor-container {
+            height: 40%;
+
+            .editor {
+              height: 80%;
+            }
+          }
+        }
+      }
+    }
+  }
 }
+
 .label-padding {
   padding-right: 3px;
 }
 
 .span-padding {
   padding: 0.1rem;
+}
+
+.no-style-list {
+  list-style: none;
 }

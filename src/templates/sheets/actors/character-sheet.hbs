@@ -3,32 +3,15 @@
     <div class='header-bar'>
       <img class='profile-img' src='{{actor.img}}' title='{{actor.name}}' data-edit='img' />
       <div class='header-info'>
-        <input
-          class='name'
-          name='name'
-          type='text'
-          value='{{actor.name}}'
-          placeholder='{{localize "godbound.sheet.name"}}'
-        />
+        <input class='name' name='name' type='text' value='{{actor.name}}'
+          placeholder='{{localize 'godbound.sheet.name'}}' />
         <div class='hp'>
           <label class='label-padding'>{{localize 'godbound.sheet.hp'}}:</label>
-          <input
-            type='number'
-            step='1'
-            name='data.hp.value'
-            value='{{actor.data.data.hp.value}}'
-            data-dtype='Number'
-            min='0'
-          />
+          <input type='number' step='1' name='data.hp.value' value='{{actor.data.data.hp.value}}' data-dtype='Number'
+            min='0' />
           <span class='span-padding'>/</span>
-          <input
-            type='number'
-            name='data.hp.max'
-            value='{{actor.data.data.hp.max}}'
-            step='1'
-            min='1'
-            data-dtype='Number'
-          />
+          <input type='number' name='data.hp.max' value='{{actor.data.data.hp.max}}' step='1' min='1'
+            data-dtype='Number' />
         </div>
         <div class='ac'>
           <label class='label-padding'>{{localize 'godbound.sheet.ac'}}:</label>
@@ -36,34 +19,16 @@
         </div>
         <div class='xp'>
           <label class='label-padding'>{{localize 'godbound.sheet.xp'}}:</label>
-          <input
-            type='number'
-            step='1'
-            name='data.details.xp.value'
-            value='{{actor.data.data.details.xp.value}}'
-            data-dtype='Number'
-            min='0'
-          />
+          <input type='number' step='1' name='data.details.xp.value' value='{{actor.data.data.details.xp.value}}'
+            data-dtype='Number' min='0' />
           <span class='span-padding'>/</span>
-          <input
-            type='number'
-            name='data.details.xp.next'
-            value='{{actor.data.data.details.xp.next}}'
-            step='1'
-            min='1'
-            data-dtype='Number'
-          />
+          <input type='number' name='data.details.xp.next' value='{{actor.data.data.details.xp.next}}' step='1' min='1'
+            data-dtype='Number' />
         </div>
         <div class='level'>
           <label class='label-padding'>{{localize 'godbound.sheet.level'}}:</label>
-          <input
-            type='number'
-            step='1'
-            name='data.details.level'
-            value='{{actor.data.data.details.level}}'
-            data-dtype='Number'
-            min='0'
-          />
+          <input type='number' step='1' name='data.details.level' value='{{actor.data.data.details.level}}'
+            data-dtype='Number' min='0' />
         </div>
       </div>
     </div>
@@ -93,15 +58,8 @@
                 </label>
               </td>
               <td>
-                <input
-                  type='number'
-                  min='3'
-                  max='18'
-                  step='1'
-                  name='data.attributes.{{key}}.value'
-                  value='{{stat.value}}'
-                  data-dtype='Number'
-                />
+                <input type='number' min='3' max='18' step='1' name='data.attributes.{{key}}.value'
+                  value='{{stat.value}}' data-dtype='Number' />
               </td>
               <td>
                 <span>
@@ -113,6 +71,247 @@
         </table>
 
       </div>
+      <div class='effort'>
+        <table>
+          <thead>
+            <tr>
+              <th>
+                {{localize 'godbound.effort.effort'}}
+              </th>
+            </tr>
+          </thead>
+          <td>
+            <table>
+              <thead>
+                <tr>
+                  <th>
+                    {{localize 'godbound.effort.available'}}
+                  </th>
+                  <th>
+                    {{localize 'godbound.effort.maximum'}}
+                  </th>
+                </tr>
+              </thead>
+              <tr>
+                <td>
+                  {{actor.data.data.resources.effort.value}}
+                </td>
+                <td>
+                  {{actor.data.data.resources.effort.max}}
+                </td>
+              </tr>
+            </table>
+            <table>
+              <thead>
+                <tr>
+                  <th>
+                    {{localize 'godbound.effort.committedTimes.ongoing'}}
+                  </th>
+                  <th>
+                    {{localize 'godbound.effort.committedTimes.scene'}}
+                  </th>
+                  <th>
+                    {{localize 'godbound.effort.committedTimes.day'}}
+                  </th>
+                </tr>
+              </thead>
+              <tr>
+                <td>
+                  {{actor.data.data.resources.effort.ongoing}}
+                </td>
+                <td>
+                  {{actor.data.data.resources.effort.scene}}
+                </td>
+                <td>
+                  {{actor.data.data.resources.effort.day}}
+                </td>
+              </tr>
+            </table>
+          </td>
+        </table>
+      </div>
+      <div class='saves'>
+        <div data-save-type='hardiness' class='save'>
+          {{localize 'godbound.saves.hardiness'}}
+          v{{subtract actor.data.data.saves.hardiness.base actor.data.data.saves.hardiness.mod}}
+          <i class='fas fa-dice-d20'></i>
+        </div>
+        <div data-save-type='evasion' class='save'>
+          {{localize 'godbound.saves.evasion'}}
+          v{{subtract actor.data.data.saves.hardiness.base actor.data.data.saves.hardiness.mod}}
+          <i class='fas fa-dice-d20'></i>
+        </div>
+        <div data-save-type='spirit' class='save'>
+          {{localize 'godbound.saves.spirit'}}
+          v{{subtract actor.data.data.saves.hardiness.base actor.data.data.saves.hardiness.mod}}
+          <i class='fas fa-dice-d20'></i>
+        </div>
+      </div>
+    </div>
+    <div class='main-body-center'>
+      <nav data-group='primary' class='pc-sheet-tabs'>
+        <a class='tab-button' data-tab='biography'>
+          {{localize 'godbound.sheet.tabs.biography'}}
+        </a>
+        <a class='tab-button' data-tab='combat'>
+          {{localize 'godbound.sheet.tabs.combat'}}
+        </a>
+        <a class='tab-button' data-tab='divinity'>
+          {{localize 'godbound.sheet.tabs.divinity'}}
+        </a>
+        <a class='tab-button' data-tab='arts'>
+          {{localize 'godbound.sheet.tabs.arts'}}
+        </a>
+        <a class='tab-button' data-tab='projects'>
+          {{localize 'godbound.sheet.tabs.projects'}}
+        </a>
+      </nav>
+      <section class='pc-sheet-body'>
+        <div class='tab biography' data-group='primary' data-tab='biography'>
+          <div class='description sheet-editor-container'>
+            <h2>{{localize 'godbound.common.description'}}</h2>
+            {{editor content=data.data.description target='data.description' button=true owner=owner editable=editable}}
+          </div>
+          <div class='facts'>
+            <h2>{{localize 'godbound.sheet.biography.facts'}}</h2>
+            {{#each facts as |fact id|}}
+              {{> 'systems/godbound/templates/sheets/partials/character-fact-card.hbs' fact}}
+            {{/each}}
+          </div>
+        </div>
+        <div class='tab combat' data-group='primary' data-tab='combat'>
+          <div>
+            <div class='attacks-section'>
+              <li class='item-titles flexrow'>
+                <div>{{localize 'godbound.sheet.combat.attacks'}}</div>
+                <div title='{{localize 'godbound.weapon.damage'}}'><i class='fas fa-tint'></i></div>
+                <div title='{{localize 'godbound.common.attackBonus'}}'><i class='fas fa-solid fa-crosshairs'></i>
+                </div>
+                <div title='{{localize 'godbound.common.quantity'}}'><i class='fas fa-solid fa-hashtag'></i></div>
+              </li>
+              <ol class='item-list no-style-list'>
+                {{#each weapons as |weapon id|}}
+                  {{> 'systems/godbound/templates/sheets/partials/character-weapon-card.hbs' weapon}}
+                {{/each}}
+              </ol>
+            </div>
+            <div class='defences-section'>
+              <li class='item-titles flexrow'>
+                <div>{{localize 'godbound.sheet.combat.defences'}}</div>
+                <div>{{localize 'godbound.sheet.ac'}}</div>
+                <div title='{{localize 'godbound.armour.isShield'}}'><i class='fas fa-shield-alt'></i></div>
+                <div title='{{localize 'godbound.armour.shieldModifier'}}'>{{localize 'godbound.sheet.mod'}}</div>
+              </li>
+              <ol class='item-list no-style-list'>
+                {{#each armours as |armour id|}}
+                  {{> 'systems/godbound/templates/sheets/partials/character-armour-card.hbs' armour}}
+                {{/each}}
+              </ol>
+            </div>
+          </div>
+        </div>
+        <div class='tab divinity' data-group='primary' data-tab='divinity'>
+          <div>
+            <div class='words-section'>
+              <h2>{{localize 'godbound.sheet.divinity.words.words-header'}}</h2>
+              <ul class='words-list no-style-list'>
+                {{#each words as |word id|}}
+                  {{> 'systems/godbound/templates/sheets/partials/character-word-card.hbs' (object activeWord=word gifts=../gifts)}}
+                {{/each}}
+              </ul>
+            </div>
+            <div class='artifacts-section'>
+              <h2>{{localize 'godbound.sheet.divinity.artifacts.artifacts-header'}}</h2>
+              <ul class='artifact-list no-style-list'>
+                {{#each artifacts as |artifact id|}}
+                  {{> 'systems/godbound/templates/sheets/partials/character-artifact-card.hbs' (object activeArtifact=artifact gifts=../gifts)}}
+                {{/each}}
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class='tab arts' data-group='primary' data-tab='arts'>
+          <div>
+            <div class='thaumaturgy-section'>
+              <h2>
+                {{localize 'godbound.sheet.arts.thaumaturgy.thaumaturgies'}}
+              </h2>
+              <div class='thaumaturgy-titles flexrow'>
+                <div>
+                  {{localize 'godbound.sheet.arts.thaumaturgy.thaumaturgy'}}
+                </div>
+                <div title='{{localize 'godbound.sheet.arts.thaumaturgy.invocationLevel'}}'>
+                  {{localize 'godbound.sheet.arts.thaumaturgy.invocationLevel'}}
+                </div>
+                <div title='{{localize 'godbound.effort.committedTimes.scene'}}'>
+                  {{localize 'godbound.effort.committedTimes.scene'}}
+                </div>
+                <div title='{{localize 'godbound.effort.committedTimes.day'}}'>
+                  {{localize 'godbound.effort.committedTimes.day'}}
+                </div>
+              </div>
+              <ul class='thaumaturgy-list no-style-list'>
+                {{#each thaumaturgies as |thaumaturgy id|}}
+                  {{> 'systems/godbound/templates/sheets/partials/character-thaumaturgy-card.hbs' thaumaturgy}}
+                {{/each}}
+              </ul>
+            </div>
+            <div class='lowMagic-section'>
+            	<h2>
+            		{{localize 'godbound.sheet.arts.lowMagic.lowMagics'}}
+            	</h2>
+		    	<div class='lowMagic-titles flexrow'>
+                	<div>
+                  		{{localize 'godbound.sheet.arts.lowMagic.tradition'}}
+                	</div>
+                	<div title='{{localize 'godbound.sheet.arts.lowMagic.mastery'}}'>
+                  		{{localize 'godbound.sheet.arts.lowMagic.mastery'}}
+                	</div>
+                	<div title='{{localize 'godbound.sheet.arts.lowMagic.castingType'}}'>
+                  		{{localize 'godbound.sheet.arts.lowMagic.castingType'}}
+                	</div>
+            	</div>
+            	<ul class='lowMagic-list no-style-list'>
+            		{{#each lowMagics as |lowMagic id|}}
+                		{{> 'systems/godbound/templates/sheets/partials/character-lowMagic-card.hbs' lowMagic}}
+                	{{/each}}
+              	</ul>
+            </div>
+            <div class='strife-section'>
+            	<h2>{{localize 'godbound.sheet.arts.strife.strifes'}}</h2>
+            	<ul class='strifes-list no-style-list'>
+            		{{#each strifes as |strife id|}}
+                		{{> 'systems/godbound/templates/sheets/partials/character-strife-card.hbs' (object activeStrife=strife strifeTechniques=../strifeTechniques)}}
+            		{{/each}}
+              	</ul>
+            </div>
+          </div>
+        </div>
+        <div class='tab projects' data-group='primary' data-tab='projects'>
+          	<div>
+            	<h2>{{localize 'godbound.sheet.tabs.projects'}}</h2>
+				<div class='project-titles flexrow'>
+                	<div>
+                  		{{localize 'godbound.sheet.name'}}
+                	</div>
+                	<div title='{{localize 'godbound.projects.dominionSpent'}}'>
+                  		{{localize 'godbound.sheet.projects.dominion'}}
+                	</div>
+					<div title='{{localize 'godbound.projects.influenceCommitted'}}'>
+                  		{{localize 'godbound.sheet.projects.influence'}}
+                	</div>
+					<div title='{{localize 'godbound.projects.isCompleted'}}'>
+                  		{{localize 'godbound.projects.isCompleted'}}
+                	</div>
+            	</div>
+        	</div>
+			<ul class='project-list no-style-list'>
+            	{{#each projects as |project id|}}
+                	{{> 'systems/godbound/templates/sheets/partials/character-project-card.hbs' project}}
+                {{/each}}
+            </ul>
+        </div>
+      </section>
     </div>
   </div>
 </form>

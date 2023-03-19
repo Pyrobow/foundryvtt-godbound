@@ -1,0 +1,16 @@
+<li class='character-strifeTechnique-card flexcol'>
+  <div class='strifeTechnique-top-bar flexrow'>
+    <div class='strifeTechnique-info strifeTechnique-name'>
+      <a>{{name}}</a>
+    </div>
+    <div class='strifeTechnique-effort-container flexrow'>
+      <input class='strifeTechnique-effort' value='{{data.data.committedEffort}}' type='number' />
+    </div>
+    <div class='strifeTechnique-committed-for-container flexrow'>
+      <input class='strifeTechnique-committed-for' value='{{data.data.committedFor}}' type='text' readonly />
+    </div>
+  </div>
+  <div class='strifeTechnique-info strifeTechnique-description'>
+    {{{data.data.description}}}
+  </div>
+</li>
