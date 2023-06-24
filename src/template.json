@@ -21,6 +21,7 @@
           }
         },
         "ac": {
+          "base": 9,
           "value": 9,
           "mod": 0
         },
@@ -44,38 +45,32 @@
       "templates": ["common"],
       "attributes": {
         "str": {
-          "value": 0,
-          "bonus": 0,
+          "value": 10,
           "mod": 0,
           "tweak": 0
         },
         "dex": {
-          "value": 0,
-          "bonus": 0,
+          "value": 10,
           "mod": 0,
           "tweak": 0
         },
         "con": {
-          "value": 0,
-          "bonus": 0,
+          "value": 10,
           "mod": 0,
           "tweak": 0
         },
         "wis": {
-          "value": 0,
-          "bonus": 0,
+          "value": 10,
           "mod": 0,
           "tweak": 0
         },
         "int": {
-          "value": 0,
-          "bonus": 0,
+          "value": 10,
           "mod": 0,
           "tweak": 0
         },
         "cha": {
-          "value": 0,
-          "bonus": 0,
+          "value": 10,
           "mod": 0,
           "tweak": 0
         }
@@ -88,6 +83,7 @@
         }
       },
       "hp": {
+        "min": 0,
         "value": 8,
         "max": 8
       },
@@ -97,7 +93,10 @@
       "resources": {
         "effort": {
           "value": 2,
-          "max": 2
+          "max": 2,
+          "day": 0,
+          "scene": 0,
+          "ongoing": 0
         },
         "influence": {
           "value": 0,
@@ -121,8 +120,11 @@
       },
       "morale": 10,
       "effort": {
-        "value": 0,
-        "max": 0
+        "value": 2,
+        "max": 2,
+        "day": 0,
+        "scene": 0,
+        "ongoing": 0
       },
       "attacks": {
         "amount": 1,
@@ -189,10 +191,12 @@
       "isThrown": false,
       "range": 0,
       "attackBonusMod": 0,
+      "finalAttackBonus": 0,
       "quantity": 1
     },
     "word": {
-      "templates": ["common"]
+      "templates": ["common"],
+      "miracleEffort": 0
     },
     "divineGift": {
       "templates": ["common"],
@@ -258,7 +262,7 @@
       "resistance": 0,
       "isCompleted": false,
       "dominionSpent": 0,
-      "influenceCommited": 0
+      "influenceCommitted": 0
     }
   }
 }

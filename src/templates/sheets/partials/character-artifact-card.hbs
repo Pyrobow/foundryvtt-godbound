@@ -1,0 +1,40 @@
+<li class='character-artifact-card flexcol'>
+  <div class="artifact-section flexrow">
+    <div class='artifact-info artifact-name'>
+      <a>{{activeArtifact.name}}:</a>
+    </div>
+    <div class='artifact-effort flexrow'>
+      <label class='label-padding' title="{{localize "godbound.sheet.divinity.artifacts.artifactEffort"}}">
+        {{localize 'godbound.effort.effort'}}:
+      </label>
+      <input type='number' step='1' value='{{activeArtifact.data.data.artifactEffort.value}}' data-dtype='Number'
+        min='0' readonly />
+      <span class='span-padding'>/</span>
+      <input type='number' value='{{activeArtifact.data.data.artifactEffort.max}}' step='1' min='1' data-dtype='Number'
+        readonly />
+    </div>
+    <div class='artifact-info artifact-description'>
+      {{{activeArtifact.data.data.description}}}
+    </div>
+  </div>
+  <div class="artifact-gifts-section">
+    <div class="artifact-gift-titles flexrow">
+      <div>
+        {{localize "godbound.sheet.divinity.gifts.gift"}}
+      </div>
+      <div title="{{localize "godbound.effort.committedEffort"}}">
+        {{localize "godbound.effort.effort"}}
+      </div>
+      <div title="{{localize "godbound.effort.committedFor"}}">
+        {{localize "godbound.common.time"}}
+      </div>
+    </div>
+    <ul class="artifact-gifts-list no-style-list">
+      {{#each gifts as |gift id|}}
+        {{#if (checkEquals gift.data.data.sourceName ../activeArtifact.name)}}
+          {{> "systems/godbound/templates/sheets/partials/character-gift-card.hbs" gift}}
+        {{/if}}
+      {{/each}}
+    </ul>
+  </div>
+</li>

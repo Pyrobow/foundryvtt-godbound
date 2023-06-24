@@ -1,0 +1,36 @@
+<li class='character-word-card flexcol'>
+  <div class="word-section flexrow">
+    <div class='word-info word-name'>
+      <a>{{activeWord.name}}:</a>
+    </div>
+    <div class="word-miracle-container flexrow">
+      <label title="{{localize " godbound.sheet.divinity.words.miracleEffort"}}">
+        {{localize "godbound.sheet.divinity.words.miracles"}}:
+      </label>
+      <input class="miracle-effort" value="{{activeWord.data.data.miracleEffort}}" type="number" />
+    </div>
+    <div class='word-info word-description'>
+      {{{activeWord.data.data.description}}}
+    </div>
+  </div>
+  <div class="gifts-section">
+    <div class="gift-titles flexrow">
+      <div>
+        {{localize "godbound.sheet.divinity.gifts.gift"}}
+      </div>
+      <div title="{{localize " godbound.effort.committedEffort"}}">
+        {{localize "godbound.effort.effort"}}
+      </div>
+      <div title="{{localize " godbound.effort.committedFor"}}">
+        {{localize "godbound.common.time"}}
+      </div>
+    </div>
+    <ul class="gifts-list no-style-list">
+      {{#each gifts as |gift id|}}
+        {{#if (checkEquals gift.data.data.sourceName ../activeWord.name)}}
+          {{> "systems/godbound/templates/sheets/partials/character-gift-card.hbs" gift}}
+        {{/if}}
+      {{/each}}
+    </ul>
+  </div>
+</li>

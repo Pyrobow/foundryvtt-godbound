@@ -1,0 +1,19 @@
+<li class='character-thaumaturgy-card flexcol'>
+  <div class='thaumaturgy-top-bar flexrow'>
+    <div class='thaumaturgy-info thaumaturgy-name'>
+      <a>{{name}}</a>
+    </div>
+    <div class='thaumaturgy-info thaumaturgy-invocationLevel'>
+      <a>{{data.data.invocation}}</a>
+    </div>
+    <div class='thaumaturgy-scene-effort-container flexrow'>
+      <input class='thaumaturgy-effort' value='{{data.data.sceneEffort}}' type='number' />
+    </div>
+    <div class='thaumaturgy-day-effort-container flexrow'>
+      <input class='thaumaturgy-effort' value='{{data.data.dayEffort}}' type='number' />
+    </div>
+  </div>
+  <div class='thaumaturgy-info thaumaturgy-description'>
+    {{{data.data.description}}}
+  </div>
+</li>

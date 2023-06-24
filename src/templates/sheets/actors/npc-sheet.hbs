@@ -1,0 +1,35 @@
+<form class='{{cssClass}}' autocomplete='off'>
+	<div class=''>
+		<div class='header-bar'>
+			<img class='profile-img' src='{{actor.img}}' title='{{actor.name}}' data-edit='img' />
+			<div class='header-info'>
+				<input class='name' name='name' type='text' value='{{actor.name}}' placeholder='{{localize 'godbound.sheet.name'}}' />
+				<div class='hp'>
+					<label class='label-padding'>{{localize 'godbound.sheet.hp'}}:</label>
+					<input type='number' step='1' name='data.hp.value' value='{{actor.data.data.hp.value}}'
+						data-dtype='Number' min='0' />
+					<span class='span-padding'>/</span>
+					<input type='number' name='data.hp.max' value='{{actor.data.data.hp.max}}' step='1' min='1'
+						data-dtype='Number' />
+				</div>
+				<div class='ac'>
+					<label class='label-padding'>{{localize 'godbound.sheet.ac'}}:</label>
+					<div>{{actor.data.data.ac.value}}</div>
+				</div>
+				<div class='xp'>
+					<label class='label-padding'>{{localize 'godbound.sheet.xp'}}:</label>
+					<input type='number' step='1' name='data.details.xp.value'
+						value='{{actor.data.data.details.xp.value}}' data-dtype='Number' min='0' />
+					<span class='span-padding'>/</span>
+					<input type='number' name='data.details.xp.next' value='{{actor.data.data.details.xp.next}}'
+						step='1' min='1' data-dtype='Number' />
+				</div>
+				<div class='level'>
+					<label class='label-padding'>{{localize 'godbound.sheet.level'}}:</label>
+					<input type='number' step='1' name='data.details.level' value='{{actor.data.data.details.level}}'
+						data-dtype='Number' min='0' />
+				</div>
+			</div>
+		</div>
+	</div>
+</form>

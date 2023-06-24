@@ -1,0 +1,20 @@
+<li class="character-weapon-card">
+  <div class="weapon flexrow" data-weapon-id="{{weapon.id}}">
+    <div class="weapon-name">
+      <a>
+        <h4 title="{{name}}">
+          {{name}}
+        </h4>
+      </a>
+    </div>
+    <div class="weapon-damage-roll">
+      <input value="{{data.data.damage.roll}}" type="text" readonly />
+    </div>
+    <div class="weapon-finalAttackBonus">
+      <input value="{{data.data.finalAttackBonus}}" type="number" readonly />
+    </div>
+    <div class="weapon-quantity">
+      <input value="{{data.data.quantity}}" type="number" />
+    </div>
+  </div>
+</li>

@@ -7,9 +7,83 @@
       "attackBonus": "Attack Bonus",
       "type": "Type",
       "quantity": "Quantity",
+      "time": "Time",
       "bool": {
         "true": "True",
         "false": "False"
+      },
+      "difficulty": "Difficulty"
+    },
+    "sheet": {
+      "name": "Name",
+      "hp": "HP",
+      "ac": "AC",
+      "wealth": "Wealth",
+      "xp": "XP",
+      "level": "Level",
+      "attributes": "Attribute",
+      "mod": "Mod",
+      "value": "Value",
+      "tabs": {
+        "biography": "Biography",
+        "combat": "Combat",
+        "divinity": "Divinity",
+        "arts": "Arts",
+        "projects": "Projects",
+        "other": "Other"
+      },
+      "biography": {
+        "facts": "Facts"
+      },
+      "combat": {
+        "attacks": "Attacks",
+        "defences": "Defences",
+        "baseAc": "Base AC"
+      },
+      "divinity": {
+        "words": {
+          "words-header": "Words",
+          "miracleEffort": "Miracle Effort",
+          "miracles": "Miracles"
+        },
+        "gifts": {
+          "gifts": "Gifts",
+          "gift": "Gift"
+        },
+        "artifacts": {
+          "artifacts-header": "Artifacts",
+          "artifactEffort": "Artifact Effort"
+        }
+      },
+      "arts": {
+        "thaumaturgy": {
+          "thaumaturgy": "Thaumaturgy",
+          "thaumaturgies": "Thaumaturgies",
+          "invocations": {
+            "invocationsOfTheGate": "Invocations of the Gate",
+            "invocationsOfTheWay": "Invocations of the Way",
+            "invocationsOfTheThrone": "Invocations of the Throne"
+          },
+          "invocationLevel": "Invocation Level"
+        },
+        "lowMagic": {
+          "lowMagics": "Low Magics",
+          "tradition": "Tradition",
+          "mastery": "Mastery",
+          "castingType": "Casting Type"
+        },
+        "strife": {
+          "strifes": "Strifes",
+          "trueStrifes": "True Strifes",
+          "strifeTechniques": {
+            "strifeTechnique": "Strife Technique"
+          }
+        }
+      },
+      "projects": {
+        "cost": "Cost",
+        "dominion": "Dominion",
+        "influence": "Influence"
       }
     },
     "attributes": {
@@ -122,6 +196,25 @@
         "gate": "Gate",
         "way": "Way",
         "throne": "Throne"
+      }
+    },
+    "projects": {
+      "scope": "Scope",
+      "resistance": "Resistance",
+      "isCompleted": "Completed",
+      "dominionSpent": "Dominion Spent",
+      "influenceCommitted": "Influence Committed",
+      "difficulties": {
+        "plausible": "Plausible",
+        "implausible": "Implausible",
+        "impossible": "Impossible"
+      },
+      "scopes": {
+        "village": "Village",
+        "city": "City",
+        "region": "Region",
+        "nation": "Nation",
+        "realm": "Realm"
       }
     }
   }
