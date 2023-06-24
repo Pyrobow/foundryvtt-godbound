@@ -16,6 +16,7 @@ import { godbound } from './config';
 import registerHelpers from './handlebarHelpers';
 import GodboundItemSheet from './sheets/items/GodboundItemSheet';
 import GodboundCharacterSheet from './sheets/actors/GodboundCharacterSheet';
+import GodboundNpcSheet from './sheets/actors/GodboundNpcSheet';
 
 declare global {
   interface CONFIG {
@@ -45,7 +46,8 @@ Hooks.once('init', async () => {
   Items.registerSheet('godbound', GodboundItemSheet, { makeDefault: true });
 
   Actors.unregisterSheet('core', ActorSheet);
-  Actors.registerSheet('godbound', GodboundCharacterSheet, { makeDefault: true });
+  Actors.registerSheet('godbound', GodboundCharacterSheet, { types: ['character'], makeDefault: true });
+  Actors.registerSheet('godbound', GodboundNpcSheet, { types: ['npc'], makeDefault: true });
   // Register handlebars helpers
   registerHelpers();
 });
